@@ -11,7 +11,7 @@
 }
 
 .dark-mode {
-  background-color: rgb(28, 28, 33);
+  background-color: rgb(31, 31, 31);
 }
 
 .dark button {
@@ -68,6 +68,15 @@
   left: 32px;
 }
 
+
+
+
+/* DARK MODE SET PAGE ELEMENTS */
+
+
+
+
+
 .dark-mode .sidebar {
   color: white;
 }
@@ -76,21 +85,25 @@
   color: rgb(236, 236, 236);
 }
 
-.dark-mode .tools {
-  background-color: rgb(82, 82, 95);
-}
-
 .dark-mode .tabs {
-  background-color: rgb(56, 56, 66);
+  background-color: rgb(36,36,36);
 }
 
 .dark-mode .dropdown nav span{
-background: #2d2f31;
+background: #2c2e31;
 color: white;
 }
 
 .dark-mode .dropdown .slide {
-  background-color: rgb(56, 56, 66);
+  background-color: rgb(36,36,36);
+}
+
+.dark-mode .boxtext {
+  background: rgb(31, 31, 31);
+}
+
+.dark-mode .textbox textarea {
+  color: white;
 }
 
 .dropdown .dropbtn {
@@ -101,6 +114,20 @@ color: white;
   cursor: pointer;
 }
 
+.dark-mode .textbox textarea {
+  background-color: rgb(31, 31, 31);
+}
+
+
+
+
+/* Main CSS */
+
+
+
+
+
+
 .dropdown nav {
   z-index: 1;
   top: 0.7%;
@@ -110,8 +137,9 @@ color: white;
 }
 
 .dropdown nav span {
-  padding: 5px;
-  background: white;
+  padding: 6px;
+  margin-top: 10px;
+  background: rgb(172, 172, 172);
   color: black;
   font-size: 1.2em;
   font-variant: small-caps;
@@ -172,7 +200,7 @@ color: white;
 }
 
 .sidebar-top h1 .app {
-  color: blue;
+  color: rgb(144, 144, 240);
 }
 
 .sidebar-head {
@@ -192,11 +220,29 @@ color: white;
   background-color: rgb(162, 162, 170);
 }
 
-.tools {
-  margin-top: -11px;
-  width: 1920px;
-  height: 50px;
-  z-index: 0;
-  position: absolute;
-  background-color: rgb(193, 193, 201);
+.textbox .preview p {
+  color: white;
+  font-size: 25px;
 }
+
+
+.textbox textarea {
+  background-color: white;
+  width: 1625px;
+  height: 900px;
+  margin-top: 60px;
+  margin-left: 250px;
+  border: 0;
+  color: black;
+  appearance: none;
+  border-color: transparent;
+  outline: transparent;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
