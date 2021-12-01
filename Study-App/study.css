@@ -119,12 +119,16 @@ color: white;
   color: white;
 }
 
-.dark-mode .title textarea {
+.dark-mode .title input {
   background-color: rgb(31, 31, 31);
   color: white;
 }
 
-.dark-mode .pages .pageorg a {
+.dark-mode .page1 a {
+  color: white;
+}
+
+.dark-mode .pages a {
   color: #fff;
 }
 
@@ -210,7 +214,7 @@ color: white;
 }
 
 .sidebar-top h1 .app {
-  color: rgb(144, 144, 240);
+  color: rgb(151, 30, 30);
 }
 
 .tabs {
@@ -243,7 +247,7 @@ color: white;
   overflow: scroll;
 }
 
-.title textarea {
+.title input {
   background-color: #fff;
   width: 500px;
   height: 20px;
@@ -258,10 +262,17 @@ color: white;
   font-weight: bolder;
 }
 
+#values {
+  position: absolute;
+  top: 25%;
+}
+
+
+
 .pages {
   position: absolute;
   z-index: 8;
-  margin-top: 100px;
+  margin-top: 107px;
   width: 240px;
   height: 26px;
   text-align: center;
@@ -275,25 +286,28 @@ color: white;
   transition: 0.3s ease-in-out;
 }
 
-.pageorg {
-  width: 220px;
-  display: inline-block;
+.arrowdown .sub-btn {
+  z-index: 11;
 }
 
-.pages .pageorg a {
+
+.pages a {
   text-decoration: none;
   color: black;
   width: 240px;
-  margin-top: 3.5px;
-  margin-left: -10px;
+  font-size: 12px;
+  margin-top: 5.5px;
+  margin-left: .5px;
   text-align: center;
   display: inline-block;
+  letter-spacing: 1px;
 }
+
 
 
 .arrowdown .fas.fa-angle-right.dropdown {
   position: absolute;
-  margin-top: 100px;
+  margin-top: 78.5px;
   margin-left: 50px;
   width: 20px;
   z-index: 9;
@@ -308,6 +322,8 @@ color: white;
   transition: 0.3s ease-in-out;
   transform: scale(1.2);
 }
+
+
 
 
 

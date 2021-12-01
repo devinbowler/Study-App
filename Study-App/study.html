@@ -31,9 +31,16 @@
 
 </div>
 
+
+
 <div class="arrowdown">
-  <div class="fas fa-angle-right dropdown"><a href="#"></a></div>
+  <a class="sub-btn"><i class="fas fa-angle-right dropdown"></i></a>
+  <div class="pages">
+    <a href="#" class="sub-item">Add Page</a></div>
+  </div>
 </div>
+
+
       
 <div class="tabs"></div>
 
@@ -42,22 +49,28 @@
       <div class="sidebar-top">
         <h1><span class="study">Study</span><span class="app">App</span></h1>
     </div>
+ 
+    <p id="values"></p>
 
-    <div class="pages">
-  
-      <div class="pageorg"><a href="#">Untitled</div>
+
+<div class="title">
+    <input placeholder="Untitled" name="name"/>
   </div>
 
- 
-
-  
-    <div class="title">
-      <textarea class="shortInput" spellcheck="true" placeholder="Untitled" cols="30" rows="10"></textarea>
-    </div>
-
+  <script>
+    
+  </script>
     <div class="textbox">
       <textarea class="longInput" spellcheck="true" placeholder="Start typing..." cols="30" rows="10"></textarea>
     </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.sub-btn').click(function(){
+          $(this).next('.pages').slideToggle();
+        });
+      });
+    </script>
 
     <script src="study.js"></script>
   </body>
