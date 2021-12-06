@@ -18,4 +18,3 @@ function updateValue(e) {
   log.textContent = e.target.value;
 }
 
-
