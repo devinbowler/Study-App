@@ -14,6 +14,12 @@
 
     <script src="study.js"></script>
 
+    <ul class="tools">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+
 
     <div class="dropdown">
 
@@ -24,7 +30,7 @@
 
         <ul class="slide">
           <li><a><div class="dark"><button onclick="myFunction()">
-          <input class="toggle" type="checkbox" /></button></div></a></li>
+          <input class="toggle" type="checkbox"/></button></div></a></li>
           <li><a href="#"></a></li>
         </ul>
       </nav>
@@ -36,12 +42,26 @@
 
 
 <div class="arrowdown">
-  <a class="sub-btn"><i class="fas fa-angle-right dropdown"></i></a>
+  <input type="checkbox" id="myCheckbox" onchange="rotateElem()" checked><i class="fas fa-angle-right dropdown"></i></button>
   <div class="pages">
     <a href="#" class="sub-item">Add Page</a></div>
   </div>
 </div>
 
+<script type="text/javascript">
+
+var checkBox = document.getElementById("myCheckbox");
+  
+  function rotateElem() {
+    if (checkBox.checked == false)
+    {
+      document.querySelector('.fas.fa-angle-right.dropdown').style.transform = 'rotate(90deg)';
+    }
+    else {
+    document.querySelector('.fas.fa-angle-right.dropdown').style.transform= 'rotate(0deg)';
+    }   
+}
+</script>
 
       
 <div class="tabs"></div>
@@ -53,17 +73,87 @@
     </div>
  
     
-
+    <div class="side-title">
+      <textarea class="longInput" spellcheck="true" placeholder="Untitled" cols="5" rows="1"></textarea>
+      </div>
 
 <div class="title">
-    <input placeholder="Untitled" name="name"/>
-    <p id="values"></p>
+  <textarea class="longInput" spellcheck="true" placeholder="Untitled" cols="30" rows="1"></textarea>
   </div>
 
     <div class="textbox">
-      <textarea class="longInput" spellcheck="true" placeholder="Start typing..." cols="30" rows="10"></textarea>
+      <textarea class="shortInput" id="maintext" spellcheck="true" placeholder="Start typing..." cols="30" rows="10"></textarea>
     </div>
 
+<script>
+if (!window.x) {
+    x = {};
+}
+
+x.Selector = {};
+x.Selector.getSelected = function() {
+    var t = '';
+    if (window.getSelection) {
+        t = window.getSelection();
+    } else if (document.getSelection) {
+        t = document.getSelection();
+    } else if (document.selection) {
+        t = document.selection.createRange().text;
+    }
+    return t;
+}
+
+var pageX;
+var pageY;
+
+$(document).ready(function() {
+    $(document).bind("mousedown", function() {
+        var selectedText = x.Selector.getSelected();
+        if(selectedText != ''){
+            $('ul.tools').css({
+                'left': pageX + 0,
+                'top' : pageY - 75
+            }).fadeIn(200);
+        } else {
+            $('ul.tools').fadeOut(200);
+        }
+    });
+    $(document).on("mouseup", function(e){
+        pageX = e.pageX;
+        pageY = e.pageY;
+    });
+});
+  </script>
+
+    <script>
+      
+let value = ''
+
+const elements = document.querySelectorAll('.longInput')
+for (let i = 0; i < elements.length; i++) {
+  elements[i].addEventListener('change', handleChange)
+  elements[i].addEventListener('keyup', handleChange)
+}
+
+function handleChange(e) {
+  value = e.target.value
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].value = value
+  }
+}
+    </script>
+  
+
+    <script type="text/javascript">
+      $('.pages').hide();
+      $(document).ready(function(){
+        $('#myCheckbox').click(function(){
+          $('.pages').slideToggle();
+        });
+      });
+    </script>
+
+    <script src="study.js"></script>
 
   
   </body>

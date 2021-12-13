@@ -72,6 +72,29 @@
   left: 32px;
 }
 
+ul.tools {
+  align-content: center;
+  width: 165px;
+  height: 43px;
+  z-index: 12;
+  display: none;
+  list-style: none;
+  box-shadow: 0px 0px 4px rgba(0,0,0,.5);
+  border: solid 1px #000;
+  position: absolute;
+  background: #fff;
+}
+ul.tools li {
+  display: inline-block;
+  align-content: center;
+  width: 8px;
+  height: 20px;
+  border: solid 1px #000;
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 
 
 
@@ -79,6 +102,10 @@
 
 
 
+.dark-mode ul.tools {
+  color: white;
+  background: rgb(46, 46, 46);
+}
 
 
 .dark-mode .sidebar {
@@ -90,7 +117,7 @@
 }
 
 .dark-mode .tabs {
-  background-color: rgb(36,36,36);
+  background-color: rgb(44, 44, 44);
 }
 
 .dark-mode .dropdown nav span{
@@ -119,7 +146,7 @@ color: white;
   color: white;
 }
 
-.dark-mode .title input {
+.dark-mode .title textarea {
   background-color: rgb(31, 31, 31);
   color: white;
 }
@@ -133,6 +160,10 @@ color: white;
 }
 
 .dark-mode .arrowdown .fas.fa-angle-right.dropdown {
+  color: white;
+}
+
+.dark-mode .side-title textarea {
   color: white;
 }
 
@@ -247,7 +278,7 @@ color: white;
   overflow: scroll;
 }
 
-.title input {
+.title textarea {
   background-color: #fff;
   width: 500px;
   height: 20px;
@@ -259,6 +290,24 @@ color: white;
   outline: transparent;
   overflow: scroll;
   font-size: 20px;
+  font-weight: bolder;
+}
+
+.side-title textarea {
+  position: absolute;
+  z-index: 12;
+  background-color: transparent;
+  width: 150px;
+  height: 20px;
+  margin-top: 80px;
+  margin-left: 70px;
+  border: 0;
+  color: black;
+  appearance: none;
+  border-color: transparent;
+  outline: transparent;
+  overflow: scroll;
+  font-size: 17px;
   font-weight: bolder;
 }
 
@@ -287,10 +336,6 @@ color: white;
   transition: 0.3s ease-in-out;
 }
 
-.arrowdown .sub-btn {
-  z-index: 11;
-}
-
 
 .pages a {
   text-decoration: none;
@@ -305,24 +350,30 @@ color: white;
 }
 
 
-
-.arrowdown .fas.fa-angle-right.dropdown {
+.arrowdown input {
   position: absolute;
-  margin-top: 78.5px;
-  margin-left: 50px;
-  width: 20px;
-  z-index: 9;
- display: inline-block;
+  margin-top: 86px;
+  margin-left: 22px;
+  width: 25px;
+  z-index: 13;
  line-height: 1.7;
  cursor: pointer;
  color: black;
  transition: 0.3s ease-in-out;
+ opacity: 0;
 }
 
-.arrowdown .fas.fa-angle-right.dropdown:hover {
-  transition: 0.3s ease-in-out;
-  transform: scale(1.2);
+.arrowdown .fas.fa-angle-right.dropdown {
+  position: absolute;
+  margin-top: 78.5px;
+  margin-left: 30px;
+  width: 10px;
+  z-index: 12;
+ line-height: 1.7;
+ color: black;
+ transition: 0.3s ease-in-out;
 }
+
 
 
 
